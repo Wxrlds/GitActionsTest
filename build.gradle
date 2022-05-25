@@ -40,8 +40,15 @@ repositories {
     }
     // Cucumber
     maven {
-        url 'https://maven.blakesmods.com'
+        url "https://maven.blakesmods.com"
     }
+
+    // Botany Pots
+    maven {
+        url "https://maven.blamejared.com"
+    }
+
+
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -162,6 +169,11 @@ dependencies {
 
     // Cucumber Library to view tags
     runtimeOnly fg.deobf("com.blakebr0.cucumber:Cucumber:1.16.5-4.1.12")
+
+    // Botany Pots integration
+    // name-projectid-fileid
+    runtimeOnly fg.deobf("net.darkhax.bookshelf:Bookshelf-Forge-1.16.5:10.4.32")
+    runtimeOnly fg.deobf("net.darkhax.botanybots:BotanyPots-1.16.5:7.1.39")
 
 
     // Real examples
