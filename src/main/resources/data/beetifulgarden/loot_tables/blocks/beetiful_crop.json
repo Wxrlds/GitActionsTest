@@ -1,0 +1,97 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:eminence_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:velvet_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:marine_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:cloudy_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:verdant_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:verdigris_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:pistachio_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:pixie_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:olive_beetiful"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:sienna_beetiful"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:block_state_property",
+					"block": "beetifulgarden:beetiful_crop",
+					"properties": {
+						"age": "3"
+					}
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:beetiful_seeds"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "beetifulgarden:beetiful_seeds",
+					"conditions": [
+						{
+							"condition": "minecraft:random_chance",
+							"chance": 0.025
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:block_state_property",
+					"block": "beetifulgarden:beetiful_crop",
+					"properties": {
+						"age": "3"
+					}
+				}
+			]
+		}
+	],
+	"functions": [
+		{
+			"function": "minecraft:explosion_decay"
+		}
+	]
+}

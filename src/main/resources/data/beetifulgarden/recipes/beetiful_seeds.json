@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "sign",
+	"pattern": [
+		" E ",
+		"DBD",
+		" E "
+	],
+	"key": {
+		"B": {
+			"tag": "forge:seeds/beetroot"
+		},
+		"D": {
+			"item": "minecraft:dragon_breath"
+		},
+		"E": {
+			"item": "minecraft:end_rod"
+		}
+	},
+	"result": {
+		"item": "beetifulgarden:beetiful_seeds",
+		"count": 1
+	}
+}

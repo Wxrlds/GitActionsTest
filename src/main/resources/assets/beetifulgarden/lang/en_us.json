@@ -1,0 +1,35 @@
+{
+  "item.beetifulgarden.eminence_beetiful": "Eminence Beetiful",
+  "item.beetifulgarden.velvet_beetiful": "Velvet Beetiful",
+  "item.beetifulgarden.marine_beetiful": "Marine Beetiful",
+  "item.beetifulgarden.cloudy_beetiful": "Cloudy Beetiful",
+  "item.beetifulgarden.verdant_beetiful": "Verdant Beetiful",
+  "item.beetifulgarden.verdigris_beetiful": "Verdigris Beetiful",
+  "item.beetifulgarden.pistachio_beetiful": "Pistachio Beetiful",
+  "item.beetifulgarden.pixie_beetiful": "Pixie Beetiful",
+  "item.beetifulgarden.olive_beetiful": "Olive Beetiful",
+  "item.beetifulgarden.sienna_beetiful": "Sienna Beetiful",
+
+  "item.beetifulgarden.beetiful_seeds": "Beetiful Seeds",
+
+  "block.beetifulgarden.beetiful_crop": "Beetiful Crop",
+
+  "tooltip.beetifulgarden.eminence_effect": "\u00A77Regeneration I - 02:30\u00A7r",
+  "tooltip.beetifulgarden.velvet_effect": "\u00A77Regeneration I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.cloudy_effect": "\u00A77Haste I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.cloudy_effect_line2": "\u00A77Water Breathing I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.marine_effect": "\u00A77Haste I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.marine_effect_line2": "\u00A77Water Breathing I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.verdant_effect": "\u00A77Night Vision I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.verdant_effect_line2": "\u00A77Saturation I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.verdigris_effect": "\u00A77Night Vision I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.verdigris_effect_line2": "\u00A77Saturation I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.pistachio_effect": "\u00A77Speed I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.pixie_effect": "\u00A77Speed I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.olive_effect": "\u00A77Fire Resistance I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.olive_effect_line2": "\u00A77Jump Boost I - 05:00\u00A7r",
+  "tooltip.beetifulgarden.sienna_effect": "\u00A77Fire Resistance I - 10:00\u00A7r",
+  "tooltip.beetifulgarden.sienna_effect_line2": "\u00A77Jump Boost I - 10:00\u00A7r",
+
+  "itemGroup.beetifulGardenModGroup": "Beetiful Garden"
+}
