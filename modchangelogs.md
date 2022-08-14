@@ -1,4 +1,18 @@
-No modchangelog, changelog generator is broken
+=============================================
+Technocratica 3.0.05 --> Technocratica 3.0.06
+=============================================
+
+## Added
+- [BisectHosting Server Integration Menu [FORGE]](https://www.curseforge.com/minecraft/mc-mods/bisecthosting-server-integration-menu-forge)
+
+## Changed
+- CraftTweaker2-1.12-4.1.20.670.jar -> CraftTweaker2-1.12-4.1.20.674.jar
+- CreativeCore_v1.10.69_mc1.12.2.jar -> CreativeCore_v1.10.70_mc1.12.2.jar
+- HammerLib-1.12.2-2.0.6.31.jar -> HammerLib-1.12.2-2.0.6.32.jar
+- LittleTiles_v1.5.49_mc1.12.2.jar -> LittleTiles_v1.5.57_mc1.12.2.jar
+- PackagedAuto-1.12.2-1.0.5.18.jar -> PackagedAuto-1.12.2-1.0.5.19.jar
+- Trinkets and Baubles-0.30.1.jar -> Trinkets and Baubles-0.31.4.jar
+- WanionLib-1.12.2-2.7.jar -> WanionLib-1.12.2-2.9.jar
 
 =============================================
 Technocratica 3.0.04 --> Technocratica 3.0.05
