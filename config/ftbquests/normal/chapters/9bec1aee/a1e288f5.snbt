@@ -1,0 +1,19 @@
+{
+	x: 4.0d,
+	y: -2.0d,
+	dependencies: [
+		"5b5d9863"
+	],
+	tasks: [{
+		uid: "70b89753",
+		type: "item",
+		items: [{
+			item: "geneticsreborn:plasmidinfuser"
+		}]
+	}],
+	rewards: [{
+		uid: "85e46cda",
+		type: "item",
+		item: "geneticsreborn:overclocker"
+	}]
+}

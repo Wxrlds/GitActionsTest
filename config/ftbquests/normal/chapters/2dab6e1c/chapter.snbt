@@ -1,0 +1,7 @@
+{
+	title: "Repeatable Quests",
+	icon: "modularmachinery:itemblueprint",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: ""
+}

@@ -1,0 +1,7 @@
+{
+	title: "Conduits",
+	icon: "enderio:item_endergy_conduit 1 11",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: ""
+}
