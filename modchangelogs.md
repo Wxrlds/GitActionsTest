@@ -1,4 +1,27 @@
 =============================================
+Technocratica 3.0.06 --> Technocratica 3.0.07
+=============================================
+
+## Added
+- [AE2 Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/ae2-extended-life)
+- [Had Enough Items](https://www.curseforge.com/minecraft/mc-mods/had-enough-items)
+- [Extended Crafting: Nomifactory Edition](https://www.curseforge.com/minecraft/mc-mods/extended-crafting-nomifactory-edition)
+
+## Removed
+- [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2)
+- [Extended Crafting](https://www.curseforge.com/minecraft/mc-mods/extended-crafting)
+- [Just Enough Items (JEI)](https://www.curseforge.com/minecraft/mc-mods/jei)
+
+## Changed
+- BH-Menu-1.12.2-1.1.jar -> BH-Menu-1.12.2-1.3.jar
+- Chunk Pregenerator-V1.12-2.5.1.jar -> Chunk Pregenerator-V1.12-2.5.6.jar
+- CraftTweaker2-1.12-4.1.20.674.jar -> CraftTweaker2-1.12-4.1.20.679.jar
+- Cyclic-1.12.2-1.20.11.jar -> Cyclic-1.12.2-1.20.12.jar
+- DarknessLib-1.12.2-1.1.1.jar -> DarknessLib-1.12.2-1.1.2.jar
+- LittleTiles_v1.5.57_mc1.12.2.jar -> LittleTiles_v1.5.58_mc1.12.2.jar
+- modtweaker-4.0.20.5.jar -> modtweaker-4.0.20.11.jar
+
+=============================================
 Technocratica 3.0.05 --> Technocratica 3.0.06
 =============================================
 

@@ -1,4 +1,23 @@
 -------
+V3.0.07
+
+[Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/6ebd0ca8cfd4c5970c8b21ff520af954ab8351de)
+
+Changed the JEI description of the Karat Carrot Seeds
+
+Added Quest description to the Hunting Dimension Quest
+
+Changed Tier 1 Storage Module recipe
+
+Added Tooltip to Hyper Diamond
+
+Changed ME Controller Quest
+
+Disabled Jetpack Attachment Plate
+
+Fix broken Broken Wings config
+
+-------
 V3.0.06
 
 [Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/0311552fccb46d4871184623f315f67206cdc247)
