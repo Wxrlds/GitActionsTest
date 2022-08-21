@@ -1,9 +1,16 @@
 -------
+V3.0.09
+
+[Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/49fae5034e781f6a9c422a804dde487d337fb5e8)
+
+Fixed all recipes being broken
+
+-------
 V3.0.08
 
 [Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/5722496fc2a815205ec884b39454bf6ed51c8887)
 
-Fix some compatibility with Windows
+Fix some compatibility issues with Windows
 
 EnderIO magnet now works everywhere in the inventory and can be used with less restrictions
 
