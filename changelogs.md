@@ -1,4 +1,13 @@
 -------
+V3.0.08
+
+[Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/5722496fc2a815205ec884b39454bf6ed51c8887)
+
+Fix some compatibility with Windows
+
+EnderIO magnet now works everywhere in the inventory and can be used with less restrictions
+
+-------
 V3.0.07
 
 [Click here for a more detailed changelog](https://github.com/Wxrlds/Technocratica/commit/6ebd0ca8cfd4c5970c8b21ff520af954ab8351de)
