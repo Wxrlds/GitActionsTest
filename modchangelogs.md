@@ -7,6 +7,9 @@ No mod updates
 Technocratica 3.0.06 --> Technocratica 3.0.07
 =============================================
 
+## Forge
+- Forge-1.12.2-14.23.5.2858 -> Forge-1.12.2-14.23.5.2860
+
 ## Added
 - [AE2 Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/ae2-extended-life)
 - [Had Enough Items](https://www.curseforge.com/minecraft/mc-mods/had-enough-items)
