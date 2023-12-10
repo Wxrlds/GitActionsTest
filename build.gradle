@@ -26,29 +26,21 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    // JEI
-    maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
+    // Everything Modrinth
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            forRepositories(fg.repository)
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
     }
-    // JEI
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.dev"
-    }
-    // Cucumber
-    maven {
-        url "https://maven.blakesmods.com"
-    }
-
-    // Botany Pots
-    maven {
-        url "https://maven.blamejared.com"
-    }
-
-
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -150,30 +142,29 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.35'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
 
     // JEI to view recipes
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.152")
+    runtimeOnly fg.deobf("maven.modrinth:jei:7.8.0.1009")
 
     // Apple Skin to check Food values
-    // name-projectid-fileid
-    runtimeOnly fg.deobf("curse.maven:appleskin-248787:3686480")
+    runtimeOnly fg.deobf("maven.modrinth:appleskin:2.5.1+mc1.16.4")
 
     // Data Fixer Slayer for faster game start
     // name-projectid-fileid
     runtimeOnly fg.deobf("curse.maven:datafixerslayer-416519:3156420")
 
     // Cucumber Library to view tags
-    runtimeOnly fg.deobf("com.blakebr0.cucumber:Cucumber:1.16.5-4.1.12")
+    runtimeOnly fg.deobf("maven.modrinth:cucumber:4.1.12")
 
     // Botany Pots integration
     // name-projectid-fileid
-    runtimeOnly fg.deobf("net.darkhax.bookshelf:Bookshelf-Forge-1.16.5:10.4.32")
-    runtimeOnly fg.deobf("net.darkhax.botanybots:BotanyPots-1.16.5:7.1.39")
+    // runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:10.4.32")
+    // runtimeOnly fg.deobf("maven.modrinth:botany-pots:7.1.41")
 
 
     // Real examples
