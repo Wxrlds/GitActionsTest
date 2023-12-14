@@ -162,10 +162,11 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:cucumber:4.1.12")
 
     // Botany Pots integration
-    // name-projectid-fileid
     // runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:10.4.32")
     // runtimeOnly fg.deobf("maven.modrinth:botany-pots:7.1.41")
 
+    // Jade
+    runtimeOnly fg.deobf("maven.modrinth:jade:2.8.3")
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env

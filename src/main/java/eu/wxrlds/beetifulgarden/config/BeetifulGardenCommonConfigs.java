@@ -65,7 +65,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:haste:6000:0|minecraft:water_breathing:6000:0");
         CLOUDY_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:blue_ice");
         BUILDER.pop();
 
@@ -81,7 +81,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:regeneration:3000:0");
         EMINENCE_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:crying_obsidian");
         BUILDER.pop();
 
@@ -97,7 +97,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:haste:12000:0|minecraft:water_breathing:12000:0");
         MARINE_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:blue_glazed_terracotta");
         BUILDER.pop();
 
@@ -113,7 +113,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:fire_resistance:6000:0|minecraft:jump_boost:6000:0");
         OLIVE_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:hay_block");
         BUILDER.pop();
 
@@ -129,7 +129,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:speed:6000:0");
         PISTACHIO_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:wet_sponge");
         BUILDER.pop();
 
@@ -145,7 +145,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:speed:12000:0");
         PIXIE_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:melon");
         BUILDER.pop();
 
@@ -161,7 +161,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:fire_resistance:12000:0|minecraft:jump_boost:12000:0");
         SIENNA_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:honeycomb_block");
         BUILDER.pop();
 
@@ -177,7 +177,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:regeneration:6000:0");
         VELVET_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:bubble_coral_block");
         BUILDER.pop();
 
@@ -193,7 +193,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:night_vision:6000:0|minecraft:saturation:6000:0");
         VERDANT_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:slime_block");
         BUILDER.pop();
 
@@ -209,7 +209,7 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
                 .define(plantName.toLowerCase() + "Effects", "minecraft:night_vision:12000:0|minecraft:saturation:12000:0");
         VERDIGRIS_PLANTABLE_ON = BUILDER
-                .comment("Which block the " + plantName + " Beetiful is plantable on\nmodID:blockID")
+                .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:sea_lantern");
         BUILDER.pop();
         BUILDER.pop();

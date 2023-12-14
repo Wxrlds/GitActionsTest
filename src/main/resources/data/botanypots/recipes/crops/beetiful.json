@@ -1,106 +1,106 @@
 {
-	"type": "botanypots:crop",
-	"seed": {
-		"item": "beetifulgarden:beetiful_seeds"
-	},
-	"categories": [
-		"dirt"
-	],
-	"growthTicks": 3000,
-	"display": {
-		"block": "beetifulgarden:beetiful_crop",
-		"properties": {
-			"age": 3
-		}
-	},
-	"results": [
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:eminence_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:velvet_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:marine_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:cloudy_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:verdant_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:verdigris_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:pistachio_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:pixie_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:olive_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.05,
-			"output": {
-				"item": "beetifulgarden:sienna_beetiful"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		},
-		{
-			"chance": 0.01,
-			"output": {
-				"item": "beetifulgarden:beetiful_seeds"
-			},
-			"minRolls": 1,
-			"maxRolls": 1
-		}
-	]
+    "type": "botanypots:crop",
+    "seed": {
+        "item": "beetifulgarden:beetiful_seeds"
+    },
+    "categories": [
+        "beetiful_soil"
+    ],
+    "growthTicks": 3000,
+    "display": {
+        "block": "beetifulgarden:velvet_crop",
+        "properties": {
+            "age": 3
+        }
+    },
+    "results": [
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:eminence_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:velvet_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:marine_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:cloudy_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:verdant_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:verdigris_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:pistachio_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:pixie_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:olive_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.05,
+            "output": {
+                "item": "beetifulgarden:sienna_beetiful"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        },
+        {
+            "chance": 0.01,
+            "output": {
+                "item": "beetifulgarden:beetiful_seeds"
+            },
+            "minRolls": 1,
+            "maxRolls": 1
+        }
+    ]
 }
