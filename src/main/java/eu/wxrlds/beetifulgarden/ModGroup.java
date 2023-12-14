@@ -11,5 +11,4 @@ public class ModGroup {
 			return new ItemStack(ModItems.VELVET_BEETIFUL.get());
 		}
 	};
-
 }

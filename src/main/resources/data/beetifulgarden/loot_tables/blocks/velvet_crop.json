@@ -1,0 +1,61 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "beetifulgarden:velvet_beetiful"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "beetifulgarden:velvet_crop",
+                    "properties": {
+                        "age": "3"
+                    }
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "beetifulgarden:beetiful_seeds"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "beetifulgarden:beetiful_seeds",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.01
+                        }
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "beetifulgarden:velvet_crop",
+                    "properties": {
+                        "age": "3"
+                    }
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "minecraft:explosion_decay"
+        }
+    ]
+}

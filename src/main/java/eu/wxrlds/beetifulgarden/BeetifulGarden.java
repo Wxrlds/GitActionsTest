@@ -10,7 +10,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -69,15 +68,24 @@ public class BeetifulGarden {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        RenderTypeLookup.setRenderLayer(ModBlocks.BEETIFUL_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.CLOUDY_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.EMINENCE_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.MARINE_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.OLIVE_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PISTACHIO_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SIENNA_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.VELVET_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.VERDANT_CROP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.VERDIGRIS_CROP.get(), RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> {
-            LOGGER.info("Hello world from the MDK");
-            return "Hello world";
-        });
+//        InterModComms.sendTo("examplemod", "helloworld", () -> {
+//            LOGGER.info("Hello world from the MDK");
+//            return "Hello world";
+//        });
     }
 
     private void processIMC(final InterModProcessEvent event) {
@@ -91,7 +99,7 @@ public class BeetifulGarden {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-        LOGGER.info("HELLO from server starting");
+//        LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -101,7 +109,7 @@ public class BeetifulGarden {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
-            LOGGER.info("HELLO from Register Block");
+//            LOGGER.info("HELLO from Register Block");
         }
     }
 }

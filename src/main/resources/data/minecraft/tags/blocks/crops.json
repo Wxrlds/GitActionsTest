@@ -1,6 +1,15 @@
 {
-	"replace": false,
-	"values": [
-		"beetifulgarden:beetiful_crop"
-	]
+    "replace": false,
+    "values": [
+        "beetifulgarden:cloudy_crop",
+        "beetifulgarden:eminence_crop",
+        "beetifulgarden:marine_crop",
+        "beetifulgarden:olive_crop",
+        "beetifulgarden:pistachio_crop",
+        "beetifulgarden:pixie_crop",
+        "beetifulgarden:sienna_crop",
+        "beetifulgarden:velvet_crop",
+        "beetifulgarden:verdant_crop",
+        "beetifulgarden:verdigris_crop"
+    ]
 }

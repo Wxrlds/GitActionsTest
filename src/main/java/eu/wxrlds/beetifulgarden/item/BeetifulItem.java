@@ -45,53 +45,45 @@ public class BeetifulItem {
         return new EffectInstance[0];
     }
 
+    public static final Food.Builder CLOUDY_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.CLOUDY_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.CLOUDY_SATURATION.get().doubleValue())
+            .alwaysEat();
     public static final Food.Builder EMINENCE_PROPERTIES = (new Food.Builder())
             .nutrition(BeetifulGardenCommonConfigs.EMINENCE_NUTRITION.get())
             .saturationMod((float) BeetifulGardenCommonConfigs.EMINENCE_SATURATION.get().doubleValue())
+            .alwaysEat();
+    public static final Food.Builder MARINE_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.MARINE_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.MARINE_SATURATION.get().doubleValue())
+            .alwaysEat();
+    public static final Food.Builder OLIVE_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.OLIVE_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.OLIVE_SATURATION.get().doubleValue())
+            .alwaysEat();
+    public static final Food.Builder PISTACHIO_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.PISTACHIO_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.PISTACHIO_SATURATION.get().doubleValue())
+            .alwaysEat();
+    public static final Food.Builder PIXIE_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.PIXIE_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.PIXIE_SATURATION.get().doubleValue())
+            .alwaysEat();
+    public static final Food.Builder SIENNA_PROPERTIES = new Food.Builder()
+            .nutrition(BeetifulGardenCommonConfigs.SIENNA_NUTRITION.get())
+            .saturationMod((float) BeetifulGardenCommonConfigs.SIENNA_SATURATION.get().doubleValue())
             .alwaysEat();
 
     public static final Food.Builder VELVET_PROPERTIES = new Food.Builder()
             .nutrition(BeetifulGardenCommonConfigs.VELVET_NUTRITION.get())
             .saturationMod((float) BeetifulGardenCommonConfigs.VELVET_SATURATION.get().doubleValue())
             .alwaysEat();
-
-    public static final Food.Builder CLOUDY_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.CLOUDY_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.CLOUDY_SATURATION.get().doubleValue())
-            .alwaysEat();
-
-    public static final Food.Builder MARINE_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.MARINE_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.MARINE_SATURATION.get().doubleValue())
-            .alwaysEat();
-
     public static final Food.Builder VERDANT_PROPERTIES = new Food.Builder()
             .nutrition(BeetifulGardenCommonConfigs.VERDANT_NUTRITION.get())
             .saturationMod((float) BeetifulGardenCommonConfigs.VERDANT_SATURATION.get().doubleValue())
             .alwaysEat();
-
     public static final Food.Builder VERDIGRIS_PROPERTIES = new Food.Builder()
             .nutrition(BeetifulGardenCommonConfigs.VERDIGRIS_NUTRITION.get())
             .saturationMod((float) BeetifulGardenCommonConfigs.VERDIGRIS_SATURATION.get().doubleValue())
-            .alwaysEat();
-
-    public static final Food.Builder PISTACHIO_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.PISTACHIO_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.PISTACHIO_SATURATION.get().doubleValue())
-            .alwaysEat();
-
-    public static final Food.Builder PIXIE_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.PIXIE_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.PIXIE_SATURATION.get().doubleValue())
-            .alwaysEat();
-
-    public static final Food.Builder OLIVE_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.OLIVE_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.OLIVE_SATURATION.get().doubleValue())
-            .alwaysEat();
-
-    public static final Food.Builder SIENNA_PROPERTIES = new Food.Builder()
-            .nutrition(BeetifulGardenCommonConfigs.SIENNA_NUTRITION.get())
-            .saturationMod((float) BeetifulGardenCommonConfigs.SIENNA_SATURATION.get().doubleValue())
             .alwaysEat();
 }

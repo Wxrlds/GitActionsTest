@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/crop",
+    "textures": {
+        "crop": "beetifulgarden:block/olive_crop_stage2"
+    }
+}

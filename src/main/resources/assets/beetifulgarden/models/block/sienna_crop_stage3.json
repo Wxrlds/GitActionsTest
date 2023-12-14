@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/crop",
+    "textures": {
+        "crop": "beetifulgarden:block/sienna_crop_stage3"
+    }
+}
