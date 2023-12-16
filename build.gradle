@@ -41,6 +41,9 @@ repositories {
             }
         }
     }
+    maven {
+        url = "https://maven.theillusivec4.top"
+    }
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -170,6 +173,10 @@ dependencies {
 
     // Right click to harvest
     // runtimeOnly fg.deobf("maven.modrinth:right-click-get-crops:7j29khoS")
+
+    // Curios
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.1.0.0:api")
+    // runtimeOnly fg.deobf("maven.modrinth:curios:5qPuCFYD")
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
