@@ -49,6 +49,7 @@ public class BeetifulGardenCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Double> VERDIGRIS_SATURATION;
     public static final ForgeConfigSpec.ConfigValue<String> VERDIGRIS_EFFECTS;
     public static final ForgeConfigSpec.ConfigValue<String> VERDIGRIS_PLANTABLE_ON;
+    public static final ForgeConfigSpec.ConfigValue<String> BEETZZA_NEGATES_EFFECT;
 
     static {
         BUILDER.comment("Configs for the Beetiful Fruits");
@@ -212,6 +213,13 @@ public class BeetifulGardenCommonConfigs {
                 .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting\"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:sea_lantern");
         BUILDER.pop();
+        BUILDER.pop();
+
+        BUILDER.comment("Configs for the Beetzza");
+        BUILDER.push("Beetzza");
+        BEETZZA_NEGATES_EFFECT = BUILDER
+                .comment("Which effects the Beetzza removes when in the inventory\nCan be empty string to disable removing effects \"\"\nEffects separated by pipe (|)\nmodID:effectID|modID:effectID")
+                .define("beetzzaNegatesEffects", "minecraft:wither");
         BUILDER.pop();
 
         SPEC = BUILDER.build();

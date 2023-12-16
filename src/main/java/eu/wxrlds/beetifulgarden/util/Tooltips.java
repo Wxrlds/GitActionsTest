@@ -2,6 +2,9 @@ package eu.wxrlds.beetifulgarden.util;
 
 import com.google.common.collect.Lists;
 import com.mojang.datafixers.util.Pair;
+import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.item.ItemStack;
@@ -95,4 +98,20 @@ public class Tooltips {
         return effectInstanceList;
     }
 
+    public static void addCuresTooltip(List<ITextComponent> tooltip, float value, String curesString) {
+        if (Screen.hasAltDown()) {
+            String[] effectStrings = BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().split("\\|");
+            EffectInstance[] effects = new EffectInstance[effectStrings.length];
+            for (int i = 0; i < effectStrings.length; i++) {
+                String[] parts = effectStrings[i].split(":");
+                String modID = parts[0];
+                String effectID = parts[1];
+
+                effects[i] = new EffectInstance(ForgeRegistries.POTIONS.getValue(new ResourceLocation(modID, effectID)));
+                String translationKey = effects[i].getEffect().getDescriptionId();
+                String displayName = I18n.get(translationKey);
+                tooltip.add(ITextComponent.nullToEmpty(displayName).copy().withStyle(TextFormatting.GRAY));
+            }
+        }
+    }
 }

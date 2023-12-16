@@ -12,6 +12,8 @@
 
     "item.beetifulgarden.beetiful_seeds": "Beetiful Seeds",
 
+    "item.beetifulgarden.beetzza": "Beetzza",
+
     "block.beetifulgarden.cloudy_crop": "Cloudy Crop",
     "block.beetifulgarden.eminence_crop": "Eminence Crop",
     "block.beetifulgarden.marine_crop": "Marine Crop",
@@ -22,6 +24,8 @@
     "block.beetifulgarden.velvet_crop": "Velvet Crop",
     "block.beetifulgarden.verdant_crop": "Verdant Crop",
     "block.beetifulgarden.verdigris_crop": "Verdigris Crop",
+
+    "tooltip.beetifulgarden.beetzza_negates_alt": "Negates effects (Hold Alt)",
 
     "itemGroup.beetifulGardenModGroup": "Beetiful Garden"
 }

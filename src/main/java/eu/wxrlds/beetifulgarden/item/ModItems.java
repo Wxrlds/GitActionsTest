@@ -4,6 +4,7 @@ import eu.wxrlds.beetifulgarden.BeetifulGarden;
 import eu.wxrlds.beetifulgarden.ModGroup;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,10 +23,16 @@ public class ModItems {
     public static final RegistryObject<Item> VELVET_BEETIFUL = BeetifulItem.RegisterBeetiful("velvet_beetiful", BeetifulItem.VELVET_PROPERTIES, BeetifulGardenCommonConfigs.VELVET_EFFECTS.get());
     public static final RegistryObject<Item> VERDANT_BEETIFUL = BeetifulItem.RegisterBeetiful("verdant_beetiful", BeetifulItem.VERDANT_PROPERTIES, BeetifulGardenCommonConfigs.VERDANT_EFFECTS.get());
     public static final RegistryObject<Item> VERDIGRIS_BEETIFUL = BeetifulItem.RegisterBeetiful("verdigris_beetiful", BeetifulItem.VERDIGRIS_PROPERTIES, BeetifulGardenCommonConfigs.VERDIGRIS_EFFECTS.get());
-
     public static final RegistryObject<Item> BEETIFUL_SEEDS = ITEMS.register("beetiful_seeds",
             () -> new BeetifulSeed(
                     new Item.Properties().tab(ModGroup.BEETIFULGARDEN_GROUP)
+            ));
+    public static final RegistryObject<Item> BEETZZA = ITEMS.register("beetzza",
+            () -> new Beetzza(
+                    new Item.Properties()
+                            .tab(ModGroup.BEETIFULGARDEN_GROUP)
+                            .stacksTo(1)
+                            .rarity(Rarity.EPIC)
             ));
 
     public static void register(IEventBus eventBus) {
