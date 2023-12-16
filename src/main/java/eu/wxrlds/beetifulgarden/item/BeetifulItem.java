@@ -2,22 +2,34 @@ package eu.wxrlds.beetifulgarden.item;
 
 import eu.wxrlds.beetifulgarden.ModGroup;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
+import eu.wxrlds.beetifulgarden.util.Effects;
+import eu.wxrlds.beetifulgarden.util.Tooltips;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
 
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class BeetifulItem {
     public static RegistryObject<Item> RegisterBeetiful(String itemID, Food.Builder foodPropertiesBuilder, String effectString) {
         return ModItems.ITEMS.register(itemID,
-                () -> new Item(BeetifulItem.BeetifulProperties(foodPropertiesBuilder, effectString)));
+                () -> new Item(BeetifulItem.BeetifulProperties(foodPropertiesBuilder, effectString)) {
+                    @Override
+                    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+                        Tooltips.addPotionTooltip(tooltip, 1.0F, effectString);
+                        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+                    }
+                });
     }
 
     public static Item.Properties BeetifulProperties(Food.Builder foodPropertiesBuilder, String effectString) {
-        EffectInstance[] effects = ParseConfigEffects(effectString);
+        EffectInstance[] effects = Effects.ConfigEffectsToEffectInstanceList(effectString);
 
         for (EffectInstance effectToAdd : effects) {
             foodPropertiesBuilder = foodPropertiesBuilder.effect(effectToAdd, 1.0f);
@@ -26,23 +38,6 @@ public class BeetifulItem {
         return new Item.Properties()
                 .food(foodProperties)
                 .tab(ModGroup.BEETIFULGARDEN_GROUP);
-    }
-
-    public static EffectInstance[] ParseConfigEffects(String effectString) {
-        if (!effectString.isEmpty()) {
-            String[] effectStrings = effectString.split("\\|");
-            EffectInstance[] effectInstances = new EffectInstance[effectStrings.length];
-            for (int i = 0; i < effectStrings.length; i++) {
-                String[] parts = effectStrings[i].split(":");
-                String modID = parts[0];
-                String effectID = parts[1];
-                int duration = Integer.parseInt(parts[2]);
-                int amplifier = Integer.parseInt(parts[3]);
-                effectInstances[i] = new EffectInstance(ForgeRegistries.POTIONS.getValue(new ResourceLocation(modID, effectID)), duration, amplifier);
-            }
-            return effectInstances;
-        }
-        return new EffectInstance[0];
     }
 
     public static final Food.Builder CLOUDY_PROPERTIES = new Food.Builder()

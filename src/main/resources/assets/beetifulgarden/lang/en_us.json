@@ -23,21 +23,5 @@
     "block.beetifulgarden.verdant_crop": "Verdant Crop",
     "block.beetifulgarden.verdigris_crop": "Verdigris Crop",
 
-    "tooltip.beetifulgarden.eminence_effect": "\u00A77Regeneration I - 02:30\u00A7r",
-    "tooltip.beetifulgarden.velvet_effect": "\u00A77Regeneration I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.cloudy_effect": "\u00A77Haste I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.cloudy_effect_line2": "\u00A77Water Breathing I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.marine_effect": "\u00A77Haste I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.marine_effect_line2": "\u00A77Water Breathing I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.verdant_effect": "\u00A77Night Vision I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.verdant_effect_line2": "\u00A77Saturation I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.verdigris_effect": "\u00A77Night Vision I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.verdigris_effect_line2": "\u00A77Saturation I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.pistachio_effect": "\u00A77Speed I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.pixie_effect": "\u00A77Speed I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.olive_effect": "\u00A77Fire Resistance I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.olive_effect_line2": "\u00A77Jump Boost I - 05:00\u00A7r",
-    "tooltip.beetifulgarden.sienna_effect": "\u00A77Fire Resistance I - 10:00\u00A7r",
-    "tooltip.beetifulgarden.sienna_effect_line2": "\u00A77Jump Boost I - 10:00\u00A7r",
     "itemGroup.beetifulGardenModGroup": "Beetiful Garden"
 }

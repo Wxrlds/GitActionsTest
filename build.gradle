@@ -149,24 +149,27 @@ dependencies {
     // compile "some.group:artifact:version"
 
     // JEI to view recipes
-    runtimeOnly fg.deobf("maven.modrinth:jei:7.8.0.1009")
+    runtimeOnly fg.deobf("maven.modrinth:jei:5qV2HQVC")
 
     // Apple Skin to check Food values
-    runtimeOnly fg.deobf("maven.modrinth:appleskin:2.5.1+mc1.16.4")
+    runtimeOnly fg.deobf("maven.modrinth:appleskin:8N1HVFeQ")
 
     // Data Fixer Slayer for faster game start
     // name-projectid-fileid
     runtimeOnly fg.deobf("curse.maven:datafixerslayer-416519:3156420")
 
     // Cucumber Library to view tags
-    runtimeOnly fg.deobf("maven.modrinth:cucumber:4.1.12")
+    runtimeOnly fg.deobf("maven.modrinth:cucumber:E0dxPJOm")
 
     // Botany Pots integration
-    // runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:10.4.32")
-    // runtimeOnly fg.deobf("maven.modrinth:botany-pots:7.1.41")
+    // runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:mPFia1Xd")
+    // runtimeOnly fg.deobf("maven.modrinth:botany-pots:A2kF6L1y")
 
     // Jade
-    runtimeOnly fg.deobf("maven.modrinth:jade:2.8.3")
+    runtimeOnly fg.deobf("maven.modrinth:jade:z8VJxqga")
+
+    // Right click to harvest
+    // runtimeOnly fg.deobf("maven.modrinth:right-click-get-crops:7j29khoS")
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
