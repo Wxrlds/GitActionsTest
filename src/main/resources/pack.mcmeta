@@ -1,6 +1,6 @@
 {
     "pack": {
-        "description": "Beetiful Garden Resources",
+        "description": "${mod_id} resources",
         "pack_format": 6
     }
 }
