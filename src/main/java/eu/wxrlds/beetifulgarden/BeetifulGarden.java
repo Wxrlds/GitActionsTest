@@ -20,7 +20,6 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import top.theillusivec4.curios.api.CuriosApi;
@@ -42,12 +41,6 @@ public class BeetifulGarden {
 
         // Config file
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BeetifulGardenCommonConfigs.SPEC, "beetifulgarden-common.toml");
-        // Load config file early to make nutrition, saturation and effects configurable
-        BeetifulGardenCommonConfigs.loadConfig(
-                BeetifulGardenCommonConfigs.SPEC,
-                FMLPaths.CONFIGDIR
-                        .get()
-                        .resolve("beetifulgarden-common.toml").toString());
 
         // Register items and blocks
         ModItems.register(eventBus);
@@ -100,7 +93,7 @@ public class BeetifulGarden {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-//        LOGGER.info("HELLO from server starting");
+        // LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -110,7 +103,7 @@ public class BeetifulGarden {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
-//            LOGGER.info("HELLO from Register Block");
+            // LOGGER.info("HELLO from Register Block");
         }
     }
 }
