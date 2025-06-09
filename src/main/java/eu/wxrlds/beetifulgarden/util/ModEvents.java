@@ -20,10 +20,10 @@ public class ModEvents {
 
             PlayerEntity player = (PlayerEntity) event.getEntityLiving();
 
-            EffectInstance[] effects = new EffectInstance[0];
+            EffectInstance[] effects;
             FoodStats foodStats = player.getFoodData();
-            int nutritionValue = 0;
-            double saturationValue = 0;
+            int nutritionValue;
+            double saturationValue;
 
             // Get potion effects and food values
             Item item = event.getItem().getItem();

@@ -1,10 +1,6 @@
 package eu.wxrlds.beetifulgarden.config;
 
-import com.electronwill.nightconfig.core.file.CommentedFileConfig;
-import com.electronwill.nightconfig.core.io.WritingMode;
 import net.minecraftforge.common.ForgeConfigSpec;
-
-import java.io.File;
 
 public class BeetifulGardenCommonConfigs {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -96,7 +92,7 @@ public class BeetifulGardenCommonConfigs {
                 .defineInRange(plantName.toLowerCase() + "Saturation", 0.6, 0.0, 20.0);
         MARINE_EFFECTS = BUILDER
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
-                .define(plantName.toLowerCase() + "Effects", "minecraft:resistance:6000:3|minecraft:blindness:300:0|minecraft:slowness:1200:1|minecraft:bad_omen:10:4");
+                .define(plantName.toLowerCase() + "Effects", "minecraft:resistance:6000:3|minecraft:blindness:300:0|minecraft:slowness:1200:1|minecraft:bad_omen:20:4");
         MARINE_PLANTABLE_ON = BUILDER
                 .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting \"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:blue_glazed_terracotta");
@@ -112,7 +108,7 @@ public class BeetifulGardenCommonConfigs {
                 .defineInRange(plantName.toLowerCase() + "Saturation", 0.6, 0.0, 20.0);
         OLIVE_EFFECTS = BUILDER
                 .comment("Effects of " + plantName + " Beetiful\nCan be empty string to disable effects \"\"\nEffects separated by pipe (|)\nmodID:effectID:durationInTicks:amplifier|modID:effectID:durationInTicks:amplifier")
-                .define(plantName.toLowerCase() + "Effects", "minecraft:saturation:6000:0|minecraft:poison:120:5");
+                .define(plantName.toLowerCase() + "Effects", "minecraft:saturation:6000:0|minecraft:instant_damage:20:0");
         OLIVE_PLANTABLE_ON = BUILDER
                 .comment("Which block the " + plantName + " Beetiful is plantable on\nCan be empty string to disable planting \"\"\nmodID:blockID")
                 .define(plantName.toLowerCase() + "PlantableOn", "minecraft:hay_block");
@@ -223,13 +219,5 @@ public class BeetifulGardenCommonConfigs {
         BUILDER.pop();
 
         SPEC = BUILDER.build();
-    }
-
-    // Load config file early to make nutrition, saturation, effects configurable
-    public static void loadConfig(ForgeConfigSpec configFile, String filePath) {
-        final CommentedFileConfig file = CommentedFileConfig.builder(
-                new File(filePath)).sync().autosave().writingMode(WritingMode.REPLACE).build();
-        file.load();
-        configFile.setConfig(file);
     }
 }

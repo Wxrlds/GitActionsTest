@@ -12,8 +12,8 @@ public class AppleSkinEventHandler {
     public void onFoodValuesEvent(FoodValuesEvent event) {
         Item item = event.itemStack.getItem();
 
-        int nutritionValue = 0;
-        double saturationValue = 0;
+        int nutritionValue;
+        double saturationValue;
 
         if (item == ModItems.CLOUDY_BEETIFUL.get()) {
             nutritionValue = BeetifulGardenCommonConfigs.CLOUDY_NUTRITION.get();

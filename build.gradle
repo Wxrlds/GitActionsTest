@@ -152,9 +152,9 @@ dependencies {
     // Cucumber Library to view tags
     runtimeOnly fg.deobf("maven.modrinth:cucumber:E0dxPJOm")
 
-    // Botany Pots integration
-    // runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:mPFia1Xd")
-    // runtimeOnly fg.deobf("maven.modrinth:botany-pots:A2kF6L1y")
+    // Botany Pots
+    runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:mPFia1Xd")
+    runtimeOnly fg.deobf("maven.modrinth:botany-pots:A2kF6L1y")
 
     // Jade (What am I looking at)
     runtimeOnly fg.deobf("maven.modrinth:jade:z8VJxqga")
@@ -164,7 +164,7 @@ dependencies {
 
     // Curios
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.1.0.0:api")
-    // runtimeOnly fg.deobf("maven.modrinth:curios:5qPuCFYD")
+    runtimeOnly fg.deobf("maven.modrinth:curios:5qPuCFYD")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
