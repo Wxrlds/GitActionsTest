@@ -3,6 +3,7 @@ package eu.wxrlds.beetifulgarden.item.fruit;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.util.Tooltips;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class VelvetBeetiful extends Item {
     public VelvetBeetiful(Properties properties) {
-        super(properties);
+        super(properties.food(new Food.Builder().alwaysEat().build()));
     }
 
     @Override

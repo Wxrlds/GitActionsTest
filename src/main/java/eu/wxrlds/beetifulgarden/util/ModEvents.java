@@ -67,6 +67,9 @@ public class ModEvents {
                 effects = Effects.ConfigEffectsToEffectInstanceList(BeetifulGardenCommonConfigs.VERDIGRIS_EFFECTS.get());
                 nutritionValue = BeetifulGardenCommonConfigs.VERDIGRIS_NUTRITION.get();
                 saturationValue = BeetifulGardenCommonConfigs.VERDIGRIS_SATURATION.get();
+            } else {
+                // If the item is not one of the Beetifuls, then do not execute the other code
+                return;
             }
 
             for (EffectInstance effect : effects) {

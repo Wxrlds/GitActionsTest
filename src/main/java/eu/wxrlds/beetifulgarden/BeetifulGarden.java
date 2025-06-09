@@ -3,6 +3,7 @@ package eu.wxrlds.beetifulgarden;
 import eu.wxrlds.beetifulgarden.block.ModBlocks;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.item.ModItems;
+import eu.wxrlds.beetifulgarden.util.AppleSkinEventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -11,6 +12,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -64,7 +66,7 @@ public class BeetifulGarden {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
+        // Configure rendering of the crops
         RenderTypeLookup.setRenderLayer(ModBlocks.CLOUDY_CROP.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.EMINENCE_CROP.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.MARINE_CROP.get(), RenderType.cutout());
@@ -75,6 +77,11 @@ public class BeetifulGarden {
         RenderTypeLookup.setRenderLayer(ModBlocks.VELVET_CROP.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.VERDANT_CROP.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.VERDIGRIS_CROP.get(), RenderType.cutout());
+
+        // AppleSkin
+        if (ModList.get().isLoaded("appleskin")) {
+            MinecraftForge.EVENT_BUS.register(new AppleSkinEventHandler());
+        }
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
