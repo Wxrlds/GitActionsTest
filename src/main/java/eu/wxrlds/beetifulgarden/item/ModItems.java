@@ -3,10 +3,10 @@ package eu.wxrlds.beetifulgarden.item;
 import eu.wxrlds.beetifulgarden.BeetifulGarden;
 import eu.wxrlds.beetifulgarden.ModGroup;
 import eu.wxrlds.beetifulgarden.item.fruit.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 

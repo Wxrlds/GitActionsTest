@@ -3,10 +3,10 @@ package eu.wxrlds.beetifulgarden.util;
 import eu.wxrlds.beetifulgarden.BeetifulGarden;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.item.ModItems;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.util.FoodStats;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,10 +18,10 @@ public class ModEvents {
         // Only execute on server
         if (!event.getEntity().level.isClientSide()) {
 
-            PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+            Player player = (Player) event.getEntityLiving();
 
-            EffectInstance[] effects;
-            FoodStats foodStats = player.getFoodData();
+            MobEffectInstance[] effects;
+            FoodData foodData = player.getFoodData();
             int nutritionValue;
             double saturationValue;
 
@@ -72,12 +72,12 @@ public class ModEvents {
                 return;
             }
 
-            for (EffectInstance effect : effects) {
+            for (MobEffectInstance effect : effects) {
                 player.addEffect(effect);
             }
             // We need to cap it at 20 or the food value can go over the vanilla limit
-            foodStats.setSaturation(Math.min(20, foodStats.getSaturationLevel() + (float) saturationValue));
-            foodStats.setFoodLevel(Math.min(20, foodStats.getFoodLevel() + nutritionValue));
+            foodData.setSaturation(Math.min(20, foodData.getSaturationLevel() + (float) saturationValue));
+            foodData.setFoodLevel(Math.min(20, foodData.getFoodLevel() + nutritionValue));
         }
     }
 }

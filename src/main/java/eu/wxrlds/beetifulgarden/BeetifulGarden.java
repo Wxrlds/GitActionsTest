@@ -4,9 +4,9 @@ import eu.wxrlds.beetifulgarden.block.ModBlocks;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.item.ModItems;
 import eu.wxrlds.beetifulgarden.util.AppleSkinEventHandler;
-import net.minecraft.block.Block;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,8 +20,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import top.theillusivec4.curios.api.CuriosApi;
@@ -67,16 +67,16 @@ public class BeetifulGarden {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // Configure rendering of the crops
-        RenderTypeLookup.setRenderLayer(ModBlocks.CLOUDY_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.EMINENCE_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.MARINE_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.OLIVE_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.PISTACHIO_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.PIXIE_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.SIENNA_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.VELVET_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.VERDANT_CROP.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.VERDIGRIS_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLOUDY_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMINENCE_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MARINE_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.OLIVE_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PISTACHIO_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PIXIE_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SIENNA_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VELVET_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VERDANT_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VERDIGRIS_CROP.get(), RenderType.cutout());
 
         // AppleSkin
         if (ModList.get().isLoaded("appleskin")) {
@@ -92,7 +92,7 @@ public class BeetifulGarden {
     private void processIMC(final InterModProcessEvent event) {
         // some example code to receive and process InterModComms from other mods
         LOGGER.info("Beetiful Garden got IMC {}", event.getIMCStream().
-                map(m -> m.getMessageSupplier().get()).
+                map(m -> m.messageSupplier().get()).
                 collect(Collectors.toList()));
     }
 
