@@ -1,10 +1,10 @@
 package eu.wxrlds.beetifulgarden.block.crop;
 
-import eu.wxrlds.beetifulgarden.block.ModBlocks;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.BeetrootBlock;
@@ -12,9 +12,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class VelvetCrop extends BeetrootBlock implements IPlantable {
-    Block plantableOn = ModBlocks.ParseConfigPlantableBlock(BeetifulGardenCommonConfigs.VELVET_PLANTABLE_ON.get());
+    private Block getPlantableOn() {
+        String configValue = BeetifulGardenCommonConfigs.VELVET_PLANTABLE_ON.get();
+        return ForgeRegistries.BLOCKS.getValue(ResourceLocation.parse(configValue));
+    }
 
     public VelvetCrop(Properties properties) {
         super(properties);
@@ -28,12 +32,12 @@ public class VelvetCrop extends BeetrootBlock implements IPlantable {
 
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-        return state.is(plantableOn);
+        return state.is(getPlantableOn());
     }
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return state.is(plantableOn);
+        return state.is(getPlantableOn());
     }
 
     @Override

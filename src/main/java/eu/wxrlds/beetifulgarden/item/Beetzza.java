@@ -4,7 +4,6 @@ import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.util.Tooltips;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -26,7 +25,7 @@ public class Beetzza extends Item {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if (!BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().isEmpty()) {
-            tooltip.add(new TranslatableComponent("tooltip.beetifulgarden.beetzza_negates_alt").withStyle(ChatFormatting.GRAY));
+            tooltip.add(Component.translatable("tooltip.beetifulgarden.beetzza_negates_alt").withStyle(ChatFormatting.GRAY));
             Tooltips.addCuresTooltip(tooltip, 1.0F, BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get());
         }
         super.appendHoverText(stack, worldIn, tooltip, flagIn);

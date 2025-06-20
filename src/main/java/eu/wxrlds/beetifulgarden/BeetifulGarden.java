@@ -4,17 +4,14 @@ import eu.wxrlds.beetifulgarden.block.ModBlocks;
 import eu.wxrlds.beetifulgarden.config.BeetifulGardenCommonConfigs;
 import eu.wxrlds.beetifulgarden.item.ModItems;
 import eu.wxrlds.beetifulgarden.util.AppleSkinEventHandler;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.level.block.Block;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -37,12 +34,12 @@ public class BeetifulGarden {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public BeetifulGarden() {
+    public BeetifulGarden(FMLJavaModLoadingContext context) {
         // Register the setup method for modloading
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = context.getModEventBus();
 
         // Config file
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BeetifulGardenCommonConfigs.SPEC, "beetifulgarden-common.toml");
+        context.registerConfig(ModConfig.Type.COMMON, BeetifulGardenCommonConfigs.SPEC, "beetifulgarden-common.toml");
 
         // Register items and blocks
         ModItems.register(eventBus);
@@ -53,11 +50,28 @@ public class BeetifulGarden {
         eventBus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
         eventBus.addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-        eventBus.addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        eventBus.addListener(this::addCreative);
+    }
+
+    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == ModCreativeModTabs.BEETIFULGARDEN_GROUP) {
+            event.accept(ModItems.CLOUDY_BEETIFUL);
+            event.accept(ModItems.EMINENCE_BEETIFUL);
+            event.accept(ModItems.MARINE_BEETIFUL);
+            event.accept(ModItems.OLIVE_BEETIFUL);
+            event.accept(ModItems.PISTACHIO_BEETIFUL);
+            event.accept(ModItems.PIXIE_BEETIFUL);
+            event.accept(ModItems.SIENNA_BEETIFUL);
+            event.accept(ModItems.VELVET_BEETIFUL);
+            event.accept(ModItems.VERDANT_BEETIFUL);
+            event.accept(ModItems.VERDIGRIS_BEETIFUL);
+            event.accept(ModItems.BEETIFUL_SEEDS);
+            event.accept(ModItems.BEETZZA);
+        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -65,22 +79,14 @@ public class BeetifulGarden {
         LOGGER.info("HELLO FROM THE BEETIFUL WORLD");
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // Configure rendering of the crops
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLOUDY_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMINENCE_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MARINE_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.OLIVE_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PISTACHIO_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PIXIE_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SIENNA_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VELVET_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VERDANT_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VERDIGRIS_CROP.get(), RenderType.cutout());
-
-        // AppleSkin
-        if (ModList.get().isLoaded("appleskin")) {
-            MinecraftForge.EVENT_BUS.register(new AppleSkinEventHandler());
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            // AppleSkin
+            if (ModList.get().isLoaded("appleskin")) {
+                MinecraftForge.EVENT_BUS.register(new AppleSkinEventHandler());
+            }
         }
     }
 
@@ -103,14 +109,4 @@ public class BeetifulGarden {
         // LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            // LOGGER.info("HELLO from Register Block");
-        }
-    }
 }

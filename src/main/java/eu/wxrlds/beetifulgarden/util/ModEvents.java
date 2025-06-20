@@ -18,7 +18,7 @@ public class ModEvents {
         // Only execute on server
         if (!event.getEntity().level.isClientSide()) {
 
-            Player player = (Player) event.getEntityLiving();
+            Player player = (Player) event.getEntity();
 
             MobEffectInstance[] effects;
             FoodData foodData = player.getFoodData();
