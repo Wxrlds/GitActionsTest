@@ -19,7 +19,7 @@ public class PistachioBeetiful extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        Tooltips.addPotionTooltip(tooltip, 1.0F, BeetifulGardenCommonConfigs.PIXIE_EFFECTS.get());
+        Tooltips.addPotionTooltip(tooltip, 1.0F, BeetifulGardenCommonConfigs.PISTACHIO_EFFECTS.get());
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
 }
