@@ -43,7 +43,7 @@ public class Beetzza extends Item {
                         String[] parts = effectStrings[i].split(":");
                         String modID = parts[0];
                         String effectID = parts[1];
-                        effects[i] = new MobEffectInstance(ForgeRegistries.MOB_EFFECTS.getValue(new ResourceLocation(modID, effectID)));
+                        effects[i] = new MobEffectInstance(ForgeRegistries.MOB_EFFECTS.getValue(ResourceLocation.fromNamespaceAndPath(modID, effectID)));
 
                         Player player = (Player) entity;
                         player.removeEffect(effects[i].getEffect());
