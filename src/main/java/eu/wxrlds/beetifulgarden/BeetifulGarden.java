@@ -6,7 +6,6 @@ import eu.wxrlds.beetifulgarden.item.ModItems;
 import eu.wxrlds.beetifulgarden.util.AppleSkinEventHandler;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -53,25 +52,6 @@ public class BeetifulGarden {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        eventBus.addListener(this::addCreative);
-    }
-
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == ModCreativeModTabs.BEETIFULGARDEN_GROUP) {
-            event.accept(ModItems.CLOUDY_BEETIFUL);
-            event.accept(ModItems.EMINENCE_BEETIFUL);
-            event.accept(ModItems.MARINE_BEETIFUL);
-            event.accept(ModItems.OLIVE_BEETIFUL);
-            event.accept(ModItems.PISTACHIO_BEETIFUL);
-            event.accept(ModItems.PIXIE_BEETIFUL);
-            event.accept(ModItems.SIENNA_BEETIFUL);
-            event.accept(ModItems.VELVET_BEETIFUL);
-            event.accept(ModItems.VERDANT_BEETIFUL);
-            event.accept(ModItems.VERDIGRIS_BEETIFUL);
-            event.accept(ModItems.BEETIFUL_SEEDS);
-            event.accept(ModItems.BEETZZA);
-        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {
