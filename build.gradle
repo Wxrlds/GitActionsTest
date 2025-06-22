@@ -157,7 +157,7 @@ dependencies {
     // runtimeOnly fg.deobf("maven.modrinth:botany-pots:A2kF6L1y")
 
     // Jade (What am I looking at)
-     runtimeOnly fg.deobf("maven.modrinth:jade:H3ou3KBw")
+    runtimeOnly fg.deobf("maven.modrinth:jade:H3ou3KBw")
 
     // Right click to harvest
     // runtimeOnly fg.deobf("maven.modrinth:right-click-get-crops:7j29khoS")
