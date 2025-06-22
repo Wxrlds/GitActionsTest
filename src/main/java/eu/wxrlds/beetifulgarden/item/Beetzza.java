@@ -27,29 +27,22 @@ public class Beetzza extends Item {
     public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (!BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().isEmpty()) {
             tooltip.add(new TranslationTextComponent("tooltip.beetifulgarden.beetzza_negates_alt").withStyle(TextFormatting.GRAY));
-            Tooltips.addCuresTooltip(tooltip, 1.0F, BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get());
+            Tooltips.addCuresTooltip(tooltip);
         }
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (!BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().isEmpty())
-            if (!world.isClientSide) {
-                if (entity instanceof PlayerEntity) {
-                    String[] effectStrings = BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().split("\\|");
-                    EffectInstance[] effects = new EffectInstance[effectStrings.length];
-                    for (int i = 0; i < effectStrings.length; i++) {
-                        String[] parts = effectStrings[i].split(":");
-                        String modID = parts[0];
-                        String effectID = parts[1];
-                        effects[i] = new EffectInstance(ForgeRegistries.POTIONS.getValue(new ResourceLocation(modID, effectID)));
+        if (!BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().isEmpty() && !world.isClientSide && entity instanceof PlayerEntity) {
+            String[] effectStrings = BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().split("\\|");
+            for (String effectString : effectStrings) {
+                EffectInstance effects = new EffectInstance(ForgeRegistries.POTIONS.getValue(new ResourceLocation(effectString)));
 
-                        PlayerEntity player = (PlayerEntity) entity;
-                        player.removeEffect(effects[i].getEffect());
-                    }
-                }
+                PlayerEntity player = (PlayerEntity) entity;
+                player.removeEffect(effects.getEffect());
             }
+        }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 }
