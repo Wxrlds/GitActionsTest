@@ -149,17 +149,17 @@ dependencies {
 
     // Data Fixer Slayer for faster game start
     // name-projectid-fileid
-     runtimeOnly fg.deobf("curse.maven:lazy-dfu-forge-460819:3544496")
+    runtimeOnly fg.deobf("curse.maven:lazy-dfu-forge-460819:3544496")
 
     // Cucumber Library to view tags
-     runtimeOnly fg.deobf("maven.modrinth:cucumber:gPnt4RpR")
+    runtimeOnly fg.deobf("maven.modrinth:cucumber:gPnt4RpR")
 
     // Botany Pots
-     runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:dPZreKSP")
-     runtimeOnly fg.deobf("maven.modrinth:botany-pots:jieavSfv")
+    runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:dPZreKSP")
+    runtimeOnly fg.deobf("maven.modrinth:botany-pots:jieavSfv")
 
     // Jade (What am I looking at)
-     runtimeOnly fg.deobf("maven.modrinth:jade:L2um3gq1")
+    runtimeOnly fg.deobf("maven.modrinth:jade:L2um3gq1")
 
     // Right click to harvest
     // runtimeOnly fg.deobf("maven.modrinth:right-click-get-crops:7j29khoS")
