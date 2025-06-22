@@ -8,7 +8,7 @@ plugins {
 version = mod_version
 group = mod_group_id
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 17 to end users, so your mod should target Java 1e.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Mojang ships Java 17 to end users, so your mod should target Java 17.
 
 repositories {
     // Everything Curseforge
@@ -152,14 +152,14 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:lazy-dfu-forge-460819:4327266")
 
     // Cucumber Library to view tags
-     runtimeOnly fg.deobf("maven.modrinth:cucumber:dvkVwxka")
+    runtimeOnly fg.deobf("maven.modrinth:cucumber:dvkVwxka")
 
     // Botany Pots
-     runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:IL6yVQcP")
-     runtimeOnly fg.deobf("maven.modrinth:botany-pots:eZZTpS4W")
+    runtimeOnly fg.deobf("maven.modrinth:bookshelf-lib:IL6yVQcP")
+    runtimeOnly fg.deobf("maven.modrinth:botany-pots:eZZTpS4W")
 
     // Jade (What am I looking at)
-     runtimeOnly fg.deobf("maven.modrinth:jade:kp0HjPre")
+    runtimeOnly fg.deobf("maven.modrinth:jade:kp0HjPre")
 
     // Curios
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.6.4:api")

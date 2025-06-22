@@ -100,17 +100,13 @@ public class Tooltips {
         return effectInstanceList;
     }
 
-    public static void addCuresTooltip(List<Component> tooltip, float value, String curesString) {
+    public static void addCuresTooltip(List<Component> tooltip) {
         if (Screen.hasAltDown()) {
             String[] effectStrings = BeetifulGardenCommonConfigs.BEETZZA_NEGATES_EFFECT.get().split("\\|");
-            MobEffectInstance[] effects = new MobEffectInstance[effectStrings.length];
-            for (int i = 0; i < effectStrings.length; i++) {
-                String[] parts = effectStrings[i].split(":");
-                String modID = parts[0];
-                String effectID = parts[1];
+            for (String effectString : effectStrings) {
+                MobEffectInstance effects = new MobEffectInstance(ForgeRegistries.MOB_EFFECTS.getValue(ResourceLocation.parse(effectString)));
 
-                effects[i] = new MobEffectInstance(ForgeRegistries.MOB_EFFECTS.getValue(ResourceLocation.fromNamespaceAndPath(modID, effectID)));
-                String translationKey = effects[i].getEffect().getDescriptionId();
+                String translationKey = effects.getEffect().getDescriptionId();
                 String displayName = I18n.get(translationKey);
                 tooltip.add(Component.nullToEmpty(displayName).copy().withStyle(ChatFormatting.GRAY));
             }
