@@ -114,6 +114,8 @@ minecraft {
         }
 
         client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             // this block needs to be here for runClient to exist
         }
 
