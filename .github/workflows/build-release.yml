@@ -74,6 +74,8 @@ jobs:
                     
                     # All tags in current branch, without the current one
                     echo "Hello"
+                    ALL_TAGS=$(git tag --merged HEAD)
+                    echo "$ALL_TAGS"
                     TAG_LIST=$(git tag --merged HEAD --sort=-creatordate | grep -E '^alpha/v|^beta/v|^release/v' | grep -v "$CURRENT_TAG")
                     echo "Tag list: $TAG_LIST"
                     
