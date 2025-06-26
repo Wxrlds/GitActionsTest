@@ -27,22 +27,22 @@ jobs:
             -   name: Checkout repository
                 uses: actions/checkout@v4
 
-            -   name: Validate Gradle Wrapper
-                uses: gradle/actions/wrapper-validation@v3
+                  # -   name: Validate Gradle Wrapper
+                  # uses: gradle/actions/wrapper-validation@v3
 
-            -   name: Setup JDK 17
-                uses: actions/setup-java@v4
-                with:
-                    java-version: '17'
-                    distribution: 'temurin'
+                  # -   name: Setup JDK 17
+                  # uses: actions/setup-java@v4
+                  # with:
+                  # java-version: '17'
+                  # distribution: 'temurin'
 
-            -   name: Setup Gradle
-                uses: gradle/actions/setup-gradle@v4
-                with:
-                    cache-read-only: true
+                  # -   name: Setup Gradle
+                  # uses: gradle/actions/setup-gradle@v4
+                  # with:
+                # cache-read-only: true
 
-            -   name: Build with Gradle
-                run: ./gradlew build
+            # -   name: Build with Gradle
+            #     run: ./gradlew build
 
             -   name: Get release type from Tag
                 id: get_release_type
@@ -74,6 +74,7 @@ jobs:
                     
                     # All tags in current branch, without the current one
                     TAG_LIST=$(git tag --merged HEAD --sort=-creatordate | grep -E '^alpha/v|^beta/v|^release/v' | grep -v "$CURRENT_TAG")
+                    echo "Tag list: $TAG_LIST"
                     
                     LAST_TAG=$(echo "$TAG_LIST" | sed -n 1p)
                     echo "Last tag: $LAST_TAG"
@@ -85,6 +86,8 @@ jobs:
                         GIT_LOG_RANGE="$LAST_TAG..$CURRENT_TAG"
                     fi
                     
+                    echo "Git log range: $GIT_LOG_RANGE"
+                    
                     CHANGELOG=$(git log $GIT_LOG_RANGE --pretty=format:'[%s](https://'$REPO'/commit/%H) - %an<br>')
                     echo "changelog<<EOF" >> $GITHUB_OUTPUT
                     echo "$CHANGELOG" >> $GITHUB_OUTPUT
@@ -93,34 +96,38 @@ jobs:
                     echo "Release type is: ${{ steps.get_release_type.outputs.release_type }}"
                     echo "MC version is: ${{ steps.get_mc_version.outputs.mc_version }}"
                     echo "Mod version is: ${{ steps.get_mod_version.outputs.mod_version }}"
+            - name: Print Changelog
+              run: |
+                  echo "${{ steps.get_changelog.outputs.changelog }}"
 
-            -   name: Upload to Modrinth & Curseforge
-                uses: Kir-Antipov/mc-publish@v3.3
-                with:
-                    modrinth-id: RPbLPT3J
-                    modrinth-token: ${{ secrets.MODRINTH_API_TOKEN }}
 
-                    curseforge-id: 627559
-                    curseforge-token: ${{ secrets.CURSEFORGE_API_TOKEN }}
-
-                    name: beetifulgarden-${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
-                    game-versions: |
-                        ${{ steps.get_mc_version.outputs.mc_version }}
-                    loaders: |
-                        forge
-                    version-type: ${{ steps.get_release_type.outputs.release_type }}
-                    version: ${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
-
-                    changelog: |
-                        ${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
-                        
-                        [Need a server? Just click on the Picture, use the code WXRLDS for 25% off of your first month and play with your friends!](https://bisecthosting.com/Wxrlds)
-                        
-                        [![Bisect Hosting](https://www.bisecthosting.com/partners/custom-banners/7ac5059a-f314-47ac-8598-45d00bd20eb4.png)](https://bisecthosting.com/Wxrlds)
-                        
-                        ${{ steps.get_changelog.outputs.changelog }}
-
-                    dependencies: |
-                        botany-pots(optional)
-                        curios(optional)
-                        appleskin(optional)
+            # -   name: Upload to Modrinth & Curseforge
+            #     uses: Kir-Antipov/mc-publish@v3.3
+            #     with:
+            #         modrinth-id: RPbLPT3J
+            #         modrinth-token: ${{ secrets.MODRINTH_API_TOKEN }}
+            #
+            #         curseforge-id: 627559
+            #         curseforge-token: ${{ secrets.CURSEFORGE_API_TOKEN }}
+            #
+            #         name: beetifulgarden-${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
+            #         game-versions: |
+            #             ${{ steps.get_mc_version.outputs.mc_version }}
+            #         loaders: |
+            #             forge
+            #         version-type: ${{ steps.get_release_type.outputs.release_type }}
+            #         version: ${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
+            #
+            #         changelog: |
+            #             ${{ steps.get_mc_version.outputs.mc_version }}-${{ steps.get_mod_version.outputs.mod_version }}
+            #
+            #             [Need a server? Just click on the Picture, use the code WXRLDS for 25% off of your first month and play with your friends!](https://bisecthosting.com/Wxrlds)
+            #
+            #             [![Bisect Hosting](https://www.bisecthosting.com/partners/custom-banners/7ac5059a-f314-47ac-8598-45d00bd20eb4.png)](https://bisecthosting.com/Wxrlds)
+            #
+            #             ${{ steps.get_changelog.outputs.changelog }}
+            #
+            #         dependencies: |
+            #             botany-pots(optional)
+            #             curios(optional)
+            #             appleskin(optional)
